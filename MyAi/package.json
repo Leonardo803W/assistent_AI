@@ -1,0 +1,26 @@
+{
+  "name": "myai",
+  "version": "1.0.0",
+  "description": "La mia AI personale locale",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "web": "vite --host 127.0.0.1",
+    "web:dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && electron .\""
+  },
+  "keywords": [
+    "ai",
+    "ollama",
+    "local-ai",
+    "offline-first"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^44.3.0",
+    "vite": "^7.1.0",
+    "concurrently": "^9.2.0",
+    "wait-on": "^8.0.4"
+  }
+}

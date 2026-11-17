@@ -1,0 +1,19 @@
+# Dipendenze Node.js
+node_modules/
+
+# File di sistema
+.DS_Store
+Thumbs.db
+
+# File temporanei
+*.log
+npm-debug.log*
+
+# Variabili d'ambiente e chiavi API
+.env
+.env.local
+.env.production
+
+# Cartelle di build
+dist/
+build/

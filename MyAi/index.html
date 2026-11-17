@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      script-src 'self';
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com;
+      connect-src 'self' http://127.0.0.1:11434;
+      img-src 'self' data:;
+    "
+  >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MyAI</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+
+  <aside id = "space_AI">
+    <div id = "space_AI_mother">
+      <h3>AI madre</h3>
+
+      <div>
+        <button id="reset-mother" class = "generalButton" >Ripristina chat</button>
+        <button id="chat-mother" class = "generalButton" >Visualizza chat</button>
+      </div>
+    </div>
+    
+    <div id = "space_AI_agents">
+      <section id = "space_AI_agents_creation">
+      <h3>AI agenti</h3>
+
+      <div>
+        <button id = "agents" class = "generalButton" >Crea agente</button>
+      </div>
+    </section>
+      
+      <section id = "list_agents">
+
+        <div class="section-label">Conversazioni salvate</div>
+        <div id="conversation_list"></div>
+    </section>
+      
+  </aside>
+  
+  <main id = "main">
+    <div id = "recap">
+      <button id = "openRecap">></button>
+      <p id = "recapOff">riassunto dei messaggi precedenti della chat</p>
+    </div>
+
+    <section id="messages" aria-live="polite">
+      <div class="welcome" id="welcome">
+        <h1>Come posso aiutarti oggi?</h1>
+      </div>
+    </section>
+
+    <form id="chat-form">
+      <div>
+        <textarea
+          id="prompt"
+          placeholder="Scrivi un messaggio..."
+          rows="10"
+          maxlength="12000" 
+          required
+        ></textarea> 
+        <button id="send" type="submit">Invia ↑</button>
+      </div>
+      <p id="status">Pronto · Ollama locale</p>
+    </form>
+  </main>
+
+  <aside id = "settings">
+    <div id = "settings_AI">
+      <h3>Comportamento della AI</h3>
+
+      <p id = "settings_AI_p">Attualmente nessuno</p>
+    </div>
+    
+    <div id = "settings_objective">
+      <h3>Obbiettivo:</h3>
+
+      <button>Crea Obbiettivo</button>
+    </div>
+
+     <div id = "settings_messages_pin">
+      <h3>Messaggi pinnati:</h3>
+
+      <button>Crea messaggio</button>
+    </div>
+  </aside>
+
+  <script type="module" src="./versione web/renderer.js"></script>
+  </body>
+</html>
